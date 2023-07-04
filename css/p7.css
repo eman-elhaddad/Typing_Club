@@ -1,0 +1,197 @@
+/* nice linearGradient linear-gradient(45deg, rgb(186, 92, 92), #33786e) */
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 73px auto 120px;
+    /* background: url(../images/sky2.png), linear-gradient(0deg, #084f8e, #083466 80%); */
+    background: url(../images/sky2.png), linear-gradient(45deg, black, #083466);
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    padding: 30px;
+    padding-top: 40px;
+}
+
+.logo {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo a {
+    color: white;
+}
+
+.rightH {
+    display: flex;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.rightH div {
+    margin-left: 50px;
+}
+
+.rightH div:hover {
+    text-decoration: underline;
+}
+
+.lang::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    border: 5px solid transparent;
+    border-top-color: white;
+    transform: translate(5px, 11px);
+}
+
+/* sky */
+.sky {
+    display: flex;
+}
+
+.left {
+    width: 46%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+    perspective: 200px;
+}
+
+.sky img {
+    width: 250px;
+    margin-left: 240px;
+    box-shadow: 0 0px 90px 20px #ffffffb0;
+    border-radius: 50%;
+    animation-name: moon;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes moon {
+    50% {
+        transform: translatez(10px);
+    }
+    100% {
+        transform: translateZ(0px);
+    }
+}
+
+.right {
+    width: calc(100% - 46%);
+    display: flex;
+    align-items: center;
+}
+
+.words {
+    color: white;
+    font-size: 40px;
+    transform: translatey(-50px);
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 100px;
+}
+
+.cursor {
+    position: absolute;
+    width: 3px;
+    height: 50px;
+    background-color: white;
+    margin-left: 5px;
+    animation-name: cursor1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes cursor1 {
+    50% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: #08346668;
+    }
+}
+
+.button {
+    width: 240px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+    position: absolute;
+}
+
+.button a {
+    color: #0d6cbf;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px 1px rgb(222, 253, 130);
+}
+
+/* clouds */
+.clouds div {
+    width: 100%;
+    height: 120px;
+}
+
+.clouds3 {
+    background: url(../images/clouds3.png);
+    margin-top: -100px;
+    animation-name: cloudMoving1;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.clouds1 {
+    background: url(../images/clouds1.png);
+    margin-top: -83px;
+}
+
+.clouds2 {
+    background: url(../images/clouds2.png);
+    margin-top: -100px;
+    border-bottom: 43px solid white;
+    animation-name: cloudMoving2;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloudMoving1 {
+    to {
+        background-position: 800px;
+    }
+}
+
+@keyframes cloudMoving2 {
+    to {
+        background-position: -800px;
+    }
+}
